@@ -29,6 +29,8 @@ export class Minimap implements UIObject {
         return this.boundingBox;
     }
 
+    print({winners, marbles, winnerRank}: RenderParameters): void {}
+
     onViewportChange(callback: (pos?: VectorLike) => void) {
         this._onViewportChangeHandler = callback;
     }
