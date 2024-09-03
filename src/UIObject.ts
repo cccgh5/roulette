@@ -2,7 +2,7 @@ import { RenderParameters } from './rouletteRenderer';
 import {Rect} from './types/rect.type';
 
 export interface UIObject {
-    print({winners, marbles, winnerRank}: RenderParameters): void;
+    print(params: RenderParameters): void;
     update(deltaTime: number): void;
     render(ctx: CanvasRenderingContext2D, params: RenderParameters, width: number, height: number): void;
     getBoundingBox(): Rect | null;
