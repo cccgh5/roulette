@@ -69,6 +69,20 @@ export class Roulette extends EventTarget {
     }
 
     public printRank() {
+        const renderParams = {
+            camera: this._camera,
+            stage: this._stage,
+            wheels: this.physics.getWheels(),
+            boxes: this.physics.getBoxes(),
+            jumpers: this.physics.getJumpers(),
+            marbles: this._marbles,
+            winners: this._winners,
+            particleManager: this._particleManager,
+            effects: this._effects,
+            winnerRank: this._winnerRank,
+            winner: this._winner,
+            size: { x: this._renderer.width, y: this._renderer.height},
+        };
         this._renderer.print(renderParams, this._uiObjects);
     }
 
