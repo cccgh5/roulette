@@ -94,7 +94,7 @@ export class RouletteRenderer {
         this.renderWinner(renderParameters);
     }
 
-    print(uiObjects: UIObject[]) {
+    print(renderParameters: RenderParameters, uiObjects: UIObject[]) {
         uiObjects.forEach(obj => obj.print(renderParameters));
     }
 
