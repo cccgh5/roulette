@@ -94,6 +94,10 @@ export class RouletteRenderer {
         this.renderWinner(renderParameters);
     }
 
+    print(uiObjects: UIObject[]) {
+        uiObjects.forEach(obj => obj.print(renderParameters));
+    }
+
     private _renderWalls({stage, camera}: { stage: StageDef, camera: Camera}) {
         if (!stage) return;
         this.ctx.save();
