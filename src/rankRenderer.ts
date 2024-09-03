@@ -22,6 +22,15 @@ export class RankRenderer implements UIObject {
     this._userMoved = 2000;
   }
 
+  print({winners, marbles, winnerRank}: RenderParameters) {
+    const str = "";
+    marbles.forEach((marble: { color: any; name: any; }, rank: number) => {
+      const y = ((rank + winners.length)) * this.fontHeight;
+      str += ((rank === winnerRank ? '☆':'\u2714') + marble.name + (rank + 1)) + '\n';
+    });
+    console.log(str);
+  }
+
   render(ctx: CanvasRenderingContext2D, {winners, marbles, winnerRank}: RenderParameters, width: number, height: number) {
     const startX = width - 5;
     const startY = Math.max(0, this._currentY - (height/2));
