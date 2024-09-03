@@ -37,7 +37,7 @@ export class RankRenderer implements UIObject {
       if (y >= startY && y <= startY + ctx.canvas.height) {
         ctx.fillStyle = marble.color;
         ctx.fillText(`${rank === winnerRank ? '☆':'\u2714'} ${marble.name} #${rank + 1}`, startX, 20 + y);
-        console.log(${rank === winnerRank ? '☆':'\u2714'} + ${marble.name} + ${rank + 1});
+        console.log((rank === winnerRank ? '☆':'\u2714') + marble.name + (rank + 1));
       }
     });
     ctx.font = '10pt sans-serif';
@@ -46,6 +46,7 @@ export class RankRenderer implements UIObject {
       if (y >= startY && y <= startY + ctx.canvas.height) {
         ctx.fillStyle = marble.color;
         ctx.fillText(`${marble.name} #${rank + 1 + winners.length}`, startX, 20 + y);
+        console.log((rank === winnerRank ? '☆':'\u2714') + marble.name + (rank + 1));
       }
     });
     ctx.restore();
