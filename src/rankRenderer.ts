@@ -23,7 +23,7 @@ export class RankRenderer implements UIObject {
   }
 
   print({winners, marbles, winnerRank}: RenderParameters) {
-    str = '';
+    str = " ";
     marbles.forEach((marble: { color: any; name: any; }, rank: number) => {
       const y = ((rank + winners.length)) * this.fontHeight;
       str += ((rank === winnerRank ? '☆':'\u2714') + marble.name + (rank + 1)) + '\n';
